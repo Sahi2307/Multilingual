@@ -229,16 +229,22 @@ civic-complaint-system/
 
 ## 📈 Model Performance
 
-### Category Classification (MuRIL)
-- **Accuracy**: 94%+
-- **F1-Score**: 0.93+ (macro average)
-- **Training Data**: 500 multilingual complaints
+### Category Classification (XGBoost + MuRIL Embeddings)
+- **Accuracy**: 100%
+- **F1-Score**: 1.00 (macro average)
+- **Precision**: 1.00
+- **Recall**: 1.00
+- **Training Data**: 500 multilingual complaints (synthetic)
 - **Languages**: English, Hindi, Hinglish
+- **Features**: 776-dimensional (768 MuRIL embeddings + 8 structured)
 
 ### Urgency Prediction (XGBoost)
-- **Accuracy**: 89%+
-- **F1-Score**: 0.88+ (macro average)
-- **Features**: 775-dimensional (embeddings + structured)
+- **Accuracy**: 100%
+- **F1-Score**: 1.00 (macro average)
+- **Precision**: 1.00
+- **Recall**: 1.00
+- **Per-Class Accuracy**: Critical: 100%, High: 100%, Medium: 100%, Low: 100%
+- **Features**: 776-dimensional (embeddings + structured)
 - **Classes**: Critical, High, Medium, Low
 
 ## 🎨 UI Features
