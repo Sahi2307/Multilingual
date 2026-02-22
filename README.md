@@ -49,7 +49,7 @@ A comprehensive AI-powered civic complaint management system with multilingual s
 
 ## 📊 Project Architecture
 
-The system follows a 5-module architecture:
+The system follows a 6-module architecture:
 
 ### MODULE 1: Data Preparation Module
 - **File**: `src/data_preparation.py`
@@ -74,6 +74,15 @@ The system follows a 5-module architecture:
 - **Frontend**: Streamlit-based UI (`Home.py` + `pages/`)
 - Interactive dashboard for Citizens, Officials, and Admins
 - Visual timeline, SHAP keyword bar charts, and factor importance graphs.
+
+### MODULE 6: Smart Clustering & Dynamic Escalation
+- **Logic**: Integrated within `src/complaint_processor.py` and `utils/database.py`
+- **Geospatial Clustering**: Groups complaints within a **2km radius** using Haversine distance.
+- **Dynamic Priority**: 
+    - 📁 **3+ reports**: Elevates priority to **High**.
+    - 🚨 **5+ reports**: Forces priority to **Critical** (First Priority).
+    - ⚡ **Burst Detection**: Escalates to Critical if **5+ reports** occur within **1 hour**.
+- **Admin Consolidation**: Provides a unified view of clusters to prevent redundancy.
 
 ## 🚀 Quick Start
 
