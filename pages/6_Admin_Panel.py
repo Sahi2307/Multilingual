@@ -160,22 +160,44 @@ with tab_complaints:
         st.info(L["complaints"]["no_complaints"])
     else:
         # Prepare DataFrame for display
+        from datetime import datetime, timedelta
+        one_hour_ago = (datetime.utcnow() - timedelta(hours=1)).isoformat()
+        
         df_display = []
         for c in main_complaints:
             size = c.get("cluster_size", 1) or 1
             is_cluster = size > 1
             
+            # Check for burst in last hour
+            from utils.database import execute_query
+            burst_row = execute_query(
+                "SELECT COUNT(*) as count FROM complaints WHERE (parent_complaint_id = ? OR complaint_id = ?) AND created_at > ?",
+                (c["complaint_id"], c["complaint_id"], one_hour_ago),
+                fetch="one"
+            )
+            recent_count = burst_row["count"] if burst_row else 0
+            is_burst = recent_count >= 5
+            
+            urg_display = c['urgency']
+            if is_burst:
+                urg_display = f"⚡ BURST: {urg_display}"
+            elif urg_display == "Critical":
+                urg_display = f"🚨 {urg_display}"
+            
             row = {
                 "complaint_id": c["complaint_id"],
                 "name": c["name"],
                 "category": c["category"],
-                "urgency": f"🚨 {c['urgency']}" if c['urgency'] == "Critical" else c['urgency'],
+                "urgency": urg_display,
                 "status": c["status"],
                 "reports": f"📁 {size}" if is_cluster else "📄 1",
                 "location": c["location"],
                 "department_name": c["department_name"],
                 "official_name": c.get("official_name") or L['complaints']['unassigned']
             }
+            if is_burst:
+                row["urgency"] = f"🔥 {row['urgency']}"
+            
             df_display.append(row)
             
         df_c = pd.DataFrame(df_display)

@@ -427,17 +427,26 @@ class ComplaintProcessor:
             is_clustered = True
             parent_id = parent_complaint["complaint_id"]
             
-            # Update parent cluster size
-            current_size = parent_complaint.get("cluster_size", 1) or 1
-            new_size = current_size + 1
-            
             # Strict Urgency Escalation Logic:
-            # If size >= 5, set to Critical (First Priority)
-            # If size >= 3, set to High (Medium/Low elevated)
+            # 1. Total Reports Escalation
+            # 2. Burst Detection (>= 5 reports in last hour)
+            from datetime import datetime, timedelta
             parent_urgency = parent_complaint.get("urgency", "Low")
             target_urgency = parent_urgency
             
-            if new_size >= 5:
+            # Count sibling reports in the last hour
+            from utils.database import execute_query
+            one_hour_ago = (datetime.utcnow() - timedelta(hours=1)).isoformat()
+            recent_count_row = execute_query(
+                "SELECT COUNT(*) as count FROM complaints WHERE (parent_complaint_id = ? OR complaint_id = ?) AND created_at > ?",
+                (parent_id, parent_id, one_hour_ago),
+                fetch="one"
+            )
+            recent_count = (recent_count_row["count"] if recent_count_row else 0) + 1 # +1 for current
+            
+            is_burst = recent_count >= 5
+            
+            if new_size >= 5 or is_burst:
                 target_urgency = "Critical"
             elif new_size >= 3:
                  if parent_urgency in ["Low", "Medium"]:
@@ -446,6 +455,12 @@ class ComplaintProcessor:
             upgraded = (target_urgency != parent_urgency)
             final_urgency = target_urgency # Children inherit cluster urgency
             
+            remarks = f"System: Priority escalated to {target_urgency}."
+            if is_burst:
+                remarks += f" Detected BURST of {recent_count} reports in the last hour!"
+            else:
+                remarks += f" Reached {new_size} total reports in this area."
+
             update_data = {"cluster_size": new_size}
             if upgraded:
                 update_data["urgency"] = target_urgency
@@ -453,11 +468,11 @@ class ComplaintProcessor:
                 insert_status_update(
                     complaint_id=parent_id,
                     status=parent_complaint.get("status", "Registered"),
-                    remarks=f"System: Priority escalated to {target_urgency} due to reaching {new_size} reports in this area.",
+                    remarks=remarks,
                     project_root=self.project_root
                 )
             
-            # Update parent record (use row_id 'id' for update_record)
+            # Update parent record
             update_record("complaints", parent_complaint["id"], update_data, id_field="id")
             
         # --- CLUSTERING LOGIC END ---
@@ -466,7 +481,7 @@ class ComplaintProcessor:
         complaint_id = generate_complaint_id()
         queue_position, eta_text = self._compute_queue_position_and_eta(
             department_id=department_id,
-            urgency=urg_label,
+            urgency=final_urgency, # Use cluster-aligned urgency for queue position
             severity_score=structured_features["severity_score"],
             repeat_complaint_count=structured_features["repeat_complaint_count"],
             affected_population=structured_features["affected_population"],
