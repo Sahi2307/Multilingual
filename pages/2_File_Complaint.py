@@ -334,42 +334,89 @@ if submitted:
     st.markdown("---")
     st.subheader(labels["ai_expl"])
 
-    # Category Explanation with Simple Visualization
+    # Category Explanation — simple paragraph
     with st.expander(labels["why_cat"], expanded=True):
-        st.write(f"**Why {cat_exp.predicted_label}?**")
-        st.write("The AI found these important words in your complaint that helped decide it's a **{}** issue:".format(cat_exp.predicted_label))
-        
-        # Simple bar chart of top keywords
         top_tokens = [kw.strip() for kw in cat_exp.top_keywords[:5] if kw.strip()]
         if top_tokens:
-            token_to_val: Dict[str, float] = {}
-            for item in cat_exp.token_importances:
-                tok = item["token"].strip()
-                if tok in top_tokens:
-                    token_to_val[tok] = abs(float(item["value"]))
-            if token_to_val:
-                token_df = (
-                    pd.DataFrame({"Word": list(token_to_val.keys()), "Importance": list(token_to_val.values())})
-                    .sort_values("Importance", ascending=True)
-                )
-                st.bar_chart(token_df.set_index("Word"))
+            keyword_str = ", ".join(f"**{kw}**" for kw in top_tokens)
+            st.markdown(
+                f"Your complaint has been categorized as **{cat_exp.predicted_label}** "
+                f"with **{cat_exp.confidence * 100:.1f}%** confidence. "
+                f"The AI model identified key words such as {keyword_str} in your description, "
+                f"which are strongly associated with **{cat_exp.predicted_label}** issues. "
+                f"These terms helped the model distinguish this complaint from other categories."
+            )
+        else:
+            st.markdown(
+                f"Your complaint has been categorized as **{cat_exp.predicted_label}** "
+                f"with **{cat_exp.confidence * 100:.1f}%** confidence. "
+                f"The AI model analyzed the overall context and language of your description "
+                f"to determine this is a **{cat_exp.predicted_label}** issue."
+            )
 
-    # Urgency Explanation with Simple Visualization
+    # Urgency Explanation — template paragraph based on category + urgency + scope
     with st.expander(labels["why_pri"], expanded=True):
-        st.write(f"**Why {urg_exp.predicted_label} urgency?**")
-        st.write("Here's what factors made the AI decide this complaint needs **{}** priority:".format(urg_exp.predicted_label))
-        
-        # Simple bar chart of factor importance
-        factors_df = pd.DataFrame(
-            {
-                "Factor": list(urg_exp.factor_importance.keys()),
-                "Importance (%)": list(urg_exp.factor_importance.values()),
-            }
-        ).sort_values("Importance (%)", ascending=True)
+        urgency = urg_exp.predicted_label
+        category = cat_exp.predicted_label
+        affected = urg_exp.structured_features.get("affected_population", 0)
+        has_emergency_kw = urg_exp.structured_features.get("emergency_keyword_score", 0) > 0
 
-        st.bar_chart(factors_df.set_index("Factor"))
-        
-        st.caption("📌 " + urg_exp.nl_explanation)
+        # Scope description based on affected_population (0=few, 1=street, 2=neighborhood, 3=large area)
+        if affected >= 3:
+            scope_desc = "a large area or crowd"
+            scope_impact = "The widespread impact across a large population significantly raised the urgency"
+        elif affected >= 2:
+            scope_desc = "an entire neighborhood or locality"
+            scope_impact = "The fact that this affects an entire neighborhood contributed to a higher urgency level"
+        elif affected >= 1:
+            scope_desc = "a street or lane"
+            scope_impact = "Since this impacts an entire street, the urgency has been raised accordingly"
+        else:
+            scope_desc = "a few individuals"
+            scope_impact = "As this currently affects a small number of individuals, the urgency reflects the limited scope"
+
+        # Category-specific context
+        cat_context = {
+            "Sanitation": "Sanitation issues, if left unresolved, can lead to health hazards, spread of diseases, and unhygienic living conditions for residents.",
+            "Water Supply": "Water supply disruptions directly impact daily life, hygiene, and can pose serious health risks especially for vulnerable populations.",
+            "Transportation": "Transportation and road infrastructure issues can cause accidents, traffic disruptions, and affect commuter safety on a daily basis.",
+        }
+        cat_reason = cat_context.get(category, "This type of civic issue requires timely attention from the concerned department.")
+
+        # Urgency-specific opening
+        if urgency == "Critical":
+            urgency_opening = (
+                f"This complaint has been assigned **Critical** priority because it describes "
+                f"a severe **{category}** issue affecting **{scope_desc}**."
+            )
+        elif urgency == "High":
+            urgency_opening = (
+                f"This complaint has been assigned **High** priority because it reports "
+                f"a significant **{category}** problem impacting **{scope_desc}**."
+            )
+        elif urgency == "Medium":
+            urgency_opening = (
+                f"This complaint has been assigned **Medium** priority. The reported "
+                f"**{category}** issue affecting **{scope_desc}** requires attention but "
+                f"is not immediately life-threatening."
+            )
+        else:  # Low
+            urgency_opening = (
+                f"This complaint has been assigned **Low** priority. The reported "
+                f"**{category}** concern affecting **{scope_desc}** is noted and will be "
+                f"addressed in the standard resolution timeline."
+            )
+
+        # Emergency keyword addition
+        kw_note = ""
+        if has_emergency_kw:
+            kw_note = " Additionally, the AI detected **emergency-related keywords** in the description, which further elevated the priority."
+
+        # Final 2-3 line paragraph
+        st.markdown(
+            f"{urgency_opening} {cat_reason} "
+            f"{scope_impact}.{kw_note}"
+        )
 
 # Shared footer
 render_footer()
