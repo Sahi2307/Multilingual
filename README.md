@@ -189,7 +189,8 @@ civic-complaint-system/
 │   ├── explainability.py        # Phase 2: SHAP explainers
 │   ├── train_category_model.py  # Phase 3: MuRIL training
 │   ├── train_urgency_model.py   # Phase 3: XGBoost training
-│   └── complaint_processor.py   # Phase 4: Production pipeline
+│   ├── complaint_processor.py   # Phase 4: Production pipeline
+│   └── independent_test.py      # Independent evaluation on unseen data
 ├── utils/
 │   ├── database.py              # SQLite operations
 │   ├── auth.py                  # Authentication & password management
@@ -203,7 +204,9 @@ civic-complaint-system/
 │   └── feature_scaler.pkl
 ├── data/
 │   ├── civic_complaints.db      # SQLite database
-│   └── civic_complaints.csv     # Training dataset
+│   ├── civic_complaints.csv     # Training dataset (6K)
+│   ├── complaints.csv           # Full complaint corpus (6K, 3 languages)
+│   └── independent_test.csv     # Independent test set (auto-generated)
 └── requirements.txt             # Python dependencies
 ```
 
@@ -229,23 +232,40 @@ civic-complaint-system/
 
 ## 📈 Model Performance
 
-### Category Classification (XGBoost + MuRIL Embeddings)
-- **Accuracy**: 100%
-- **F1-Score**: 1.00 (macro average)
-- **Precision**: 1.00
-- **Recall**: 1.00
-- **Training Data**: 500 multilingual complaints (synthetic)
-- **Languages**: English, Hindi, Hinglish
+### Training & Validation (6,000 complaints from `civic_complaints.csv`)
+
+The models were trained on Google Colab (T4 GPU) using the **6K `civic_complaints.csv`** dataset, split as follows:
+- **Train**: 4,200 samples (70%) | **Val**: 900 samples (15%) | **Test**: 900 samples (15%)
+- **Languages**: English, Hindi, Hinglish (2,000 each)
 - **Features**: 776-dimensional (768 MuRIL embeddings + 8 structured)
 
-### Urgency Prediction (XGBoost)
-- **Accuracy**: 100%
-- **F1-Score**: 1.00 (macro average)
-- **Precision**: 1.00
-- **Recall**: 1.00
-- **Per-Class Accuracy**: Critical: 100%, High: 100%, Medium: 100%, Low: 100%
-- **Features**: 776-dimensional (embeddings + structured)
-- **Classes**: Critical, High, Medium, Low
+#### Category Classification (XGBoost + MuRIL Embeddings)
+
+| Metric | Test Set Score |
+|--------|---------------|
+| **Accuracy** | **97.44%** |
+| **F1-Score** (weighted) | **0.97** |
+
+| Category | Precision | Recall | F1-Score | Support |
+|----------|-----------|--------|----------|---------|
+| Sanitation | 0.98 | 0.98 | 0.98 | 371 |
+| Water Supply | 0.96 | 0.93 | 0.95 | 176 |
+| Transportation | 0.97 | 0.99 | 0.98 | 353 |
+
+#### Urgency Prediction (XGBoost)
+
+| Metric | Test Set Score |
+|--------|---------------|
+| **Accuracy** | **91.56%** |
+| **F1-Score** (weighted) | **0.92** |
+
+| Urgency Level | Precision | Recall | F1-Score | Support |
+|--------------|-----------|--------|----------|---------|
+| Critical | 0.96 | 0.95 | 0.96 | 392 |
+| High | 0.86 | 0.84 | 0.85 | 178 |
+| Medium | 0.88 | 0.90 | 0.89 | 161 |
+| Low | 0.93 | 0.96 | 0.95 | 169 |
+
 
 ## 🎨 UI Features
 
@@ -287,6 +307,11 @@ civic-complaint-system/
 Run explainability tests:
 ```bash
 python src/test_explainability.py
+```
+
+Run independent model evaluation (on unseen data from `complaints.csv`):
+```bash
+python -m src.independent_test
 ```
 
 Benchmark processing performance:

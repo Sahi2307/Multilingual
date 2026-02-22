@@ -1,0 +1,16 @@
+{
+  "test_size": 900,
+  "unique_complaints": 300,
+  "languages": [
+    "English",
+    "Hindi",
+    "Hinglish"
+  ],
+  "category_accuracy": 0.8166666666666667,
+  "urgency_accuracy_heuristic": 0.9155555555555556,
+  "per_language_category_accuracy": {
+    "English": 0.8166666666666667,
+    "Hindi": 0.8166666666666667,
+    "Hinglish": 0.8166666666666667
+  }
+}
