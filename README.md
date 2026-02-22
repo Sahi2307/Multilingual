@@ -59,8 +59,8 @@ The system follows a 5-module architecture:
 
 ### MODULE 2: Feature Extraction & Explainability Module
 - **Files**: `src/feature_extraction.py`, `src/explainability.py`
-- **Features**: 775-dimensional (768 MuRIL + 7 structured) - *Severity score removed to prevent leakage*
-- **Explainability**: SHAP with simplified semantic explanations
+- **Features**: 776-dimensional (768 MuRIL + 8 structured)
+- **Explainability**: SHAP with integrated token-level importance for categories and factor-wise importance for urgency.
 
 ### MODULE 3: Model Training Module
 - **MuRIL**: `src/train_category_model.py` - Fine-tunes Google's MuRIL for category classification
@@ -73,12 +73,12 @@ The system follows a 5-module architecture:
 ### MODULE 5: User Interface Module
 - **Frontend**: Streamlit-based UI (`Home.py` + `pages/`)
 - Interactive dashboard for Citizens, Officials, and Admins
-- Visual timeline and explanation charts
+- Visual timeline, SHAP keyword bar charts, and factor importance graphs.
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.8 or higher
+- Python 3.8 to 3.11 (Note: Python 3.12+ might have compatibility issues with some ML libs)
 - 4GB+ RAM
 - CUDA-capable GPU (optional, for faster training)
 
@@ -86,8 +86,8 @@ The system follows a 5-module architecture:
 
 1. **Clone Repository**
 ```bash
-git clone https://github.com/Sahi2307/Multilingual.git
-cd Multilingual
+git clone https://github.com/Sahi2307/multilingual.git
+cd multilingual
 ```
 
 2. **Create Virtual Environment**
@@ -102,9 +102,12 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
+> **⚠️ Installation Note**: If you encounter errors related to `numpy`, ensure you are using a version `< 2.0.0` (as specified in requirements.txt). You can fix this with:
+> `pip install "numpy<2.0.0"`
+
 4. **Initialize Database**
 ```bash
-python -c "from utils.database import initialize_database; initialize_database()"
+python -c "from utils.database import init_db; import os; init_db(os.getcwd())"
 ```
 
 This creates:
