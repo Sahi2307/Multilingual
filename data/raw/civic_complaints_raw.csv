@@ -1,0 +1,511 @@
+complaint_id,text,category,language,scope_id
+C001,"The main city water pipeline has burst, causing massive flooding on the highway.",Water Supply,English,3
+C002,"शहर की मुख्य पानी की पाइपलाइन फट गई है, जिससे हाईवे पर भारी जलभराव हो गया है।",Water Supply,Hindi,3
+C003,"Shehar ki main water pipeline phat gayi hai, jis se highway par heavy flooding ho rahi hai.",Water Supply,Hinglish,3
+C004,"There is a dead animal lying in the middle of our street lane, causing a terrible smell.",Sanitation,English,1
+C005,"हमारी गली के बीच में एक मृत जानवर पड़ा है, जिससे बहुत भयानक बदबू आ रही है।",Sanitation,Hindi,1
+C006,"Humari gali ke beech mein ek dead animal pada hai, bahut gandi smell aa rahi hai.",Sanitation,Hinglish,1
+C007,"All the streetlights in Sector 12 have been flickering and failing for two nights.",Transportation,English,2
+C008,"सेक्टर 12 की सभी स्ट्रीट लाइटें दो रातों से टिमटिमा रही हैं और खराब हो गई हैं।",Transportation,Hindi,2
+C009,"Sector 12 ki saari streetlights do raato se flicker kar rahi hain aur kharab ho gayi hain.",Transportation,Hinglish,2
+C010,"My personal kitchen sink pipe is leaking and needs immediate repair.",Water Supply,English,0
+C011,"मेरे घर के किचन सिंक का पाइप लीक हो रहा है और इसे तुरंत ठीक करने की जरूरत है।",Water Supply,Hindi,0
+C012,"Mere ghar ke kitchen sink ka pipe leak ho raha hai aur ise turant repair karna padega.",Water Supply,Hinglish,0
+C013,"The garbage collection truck has not visited our colony for the entire week.",Sanitation,English,2
+C014,"कचरा उठाने वाली गाड़ी पूरे हफ्ते से हमारी कॉलोनी में नहीं आई है।",Sanitation,Hindi,2
+C015,"Kachra uthane wali gaadi poore hafte se humari colony mein nahi aayi hai.",Sanitation,Hinglish,2
+C016,"A huge pothole has formed at the main entrance of the city hospital road.",Transportation,English,3
+C017,"सिटी अस्पताल रोड के मुख्य प्रवेश द्वार पर एक बड़ा गड्ढा बन गया है।",Transportation,Hindi,3
+C018,"City hospital road ke main entrance par ek bada gadda ban gaya hai.",Transportation,Hinglish,3
+C019,"The public tap at the corner of Lane 4 is broken and wasting water.",Water Supply,English,1
+C020,"गली नंबर 4 के कोने पर लगा सार्वजनिक नल टूट गया है और पानी बर्बाद हो रहा है।",Water Supply,Hindi,1
+C021,"Lane 4 ke corner wala public tap toot gaya hai aur paani waste ho raha hai.",Water Supply,Hinglish,1
+C022,"The open manhole near the neighborhood park is very dangerous for children.",Sanitation,English,2
+C023,"मोहल्ले के पार्क के पास खुला मैनहोल बच्चों के लिए बहुत खतरनाक है।",Sanitation,Hindi,2
+C024,"Neighborhood park ke paas khula manhole bachon ke liye bahut dangerous hai.",Sanitation,Hinglish,2
+C025,"The traffic signals at the busy Crossroad Junction are not working at all.",Transportation,English,3
+C026,"व्यस्त क्रॉसरोड जंक्शन पर ट्रैफिक सिग्नल बिल्कुल काम नहीं कर रहे हैं।",Transportation,Hindi,3
+C027,"Busy Crossroad Junction par traffic signals bilkul kaam nahi kar rahe hain.",Transportation,Hinglish,3
+C028,"Sewage water is overflowing and entering the houses in our small lane.",Sanitation,English,1
+C029,"हमारी छोटी गली के घरों में सीवर का पानी भर रहा है और ओवरफ्लो हो रहा है।",Sanitation,Hindi,1
+C030,"Humari choti gali ke gharon mein sewage ka pani bhar raha hai aur overflow ho raha hai.",Sanitation,Hinglish,1
+C031,"I am receiving contaminated and muddy water through my home tap today.",Water Supply,English,0
+C032,"आज मुझे अपने घर के नल से दूषित और मटमैला पानी मिल रहा है।",Water Supply,Hindi,0
+C033,"Aaj mujhe apne ghar ke tap se ganda aur mitti wala pani mil raha hai.",Water Supply,Hinglish,0
+C034,"Illegal parking in our colony is blocking the emergency exit for ambulances.",Transportation,English,2
+C035,"हमारी कॉलोनी में अवैध पार्किंग एम्बुलेंस के आपातकालीन निकास को रोक रही है।",Transportation,Hindi,2
+C036,"Humari colony mein illegal parking se ambulance ka emergency exit block ho raha hai.",Transportation,Hinglish,2
+C037,"The local community dustbin is broken and trash is scattered everywhere.",Sanitation,English,2
+C038,"स्थानीय सामुदायिक कूड़ेदान टूट गया है और कचरा हर जगह बिखरा हुआ है।",Sanitation,Hindi,2
+C039,"Local community dustbin toot gaya hai aur kachra har jagah faila hua hai.",Sanitation,Hinglish,2
+C040,"Low water pressure in the entire district is making it hard to cook or bathe.",Water Supply,English,3
+C041,"पूरे जिले में पानी का दबाव कम होने से खाना बनाना या नहाना मुश्किल हो रहा है।",Water Supply,Hindi,3
+C042,"Poore district mein water pressure low hone se khana banana ya nahana mushkil ho gaya hai.",Water Supply,Hinglish,3
+C043,"A fallen tree is blocking the single lane road behind the market area.",Transportation,English,1
+C044,"बाजार क्षेत्र के पीछे की सिंगल लेन वाली सड़क को एक गिरा हुआ पेड़ रोक रहा है।",Transportation,Hindi,1
+C045,"Market area ke peeche wali single lane road ko ek gira hua ped block kar raha hai.",Transportation,Hinglish,1
+C046,"The drainage line in front of my house is choked and stinking.",Sanitation,English,0
+C047,"मेरे घर के सामने की ड्रेनेज लाइन चोक हो गई है और बदबू आ रही है।",Sanitation,Hindi,0
+C048,"Mere ghar ke samne ki drainage line choke ho gayi hai aur badbu aa rahi hai.",Sanitation,Hinglish,0
+C049,"The water tank in our apartment complex hasn't been cleaned in months.",Water Supply,English,2
+C050,"हमारे अपार्टमेंट कॉम्प्लेक्स की पानी की टंकी महीनों से साफ नहीं हुई है।",Water Supply,Hindi,2
+C051,"Humare apartment complex ki pani ki tanki mahino se saaf nahi hui hai.",Water Supply,Hinglish,2
+C052,"Major cracks have appeared on the main flyover connecting the suburbs.",Transportation,English,3
+C053,"उपनगरों को जोड़ने वाले मुख्य फ्लाईओवर पर बड़ी दरारें आ गई हैं।",Transportation,Hindi,3
+C054,"Suburbs ko jodne wale main flyover par badi cracks aa gayi hain.",Transportation,Hinglish,3
+C055,"Street sweepers have not cleared the leaves from our lane for two weeks.",Sanitation,English,1
+C056,"सड़क सफाईकर्मियों ने दो हफ्तों से हमारी गली से पत्ते नहीं हटाए हैं।",Sanitation,Hindi,1
+C057,"Street sweepers ne do hafton se humari lane se patte nahi saaf kiye hain.",Sanitation,Hinglish,1
+C058,"The public fountain in the city center is overflowing and wasting water.",Water Supply,English,3
+C059,"शहर के केंद्र में स्थित सार्वजनिक फव्वारा ओवरफ्लो हो रहा है और पानी बर्बाद हो रहा है।",Water Supply,Hindi,3
+C060,"City center wala public fountain overflow ho raha hai aur pani waste ho raha hai.",Water Supply,Hinglish,3
+C061,"The footpath on the main road has been dug up and left unfinished.",Transportation,English,3
+C062,"मुख्य सड़क पर फुटपाथ खोद दिया गया है और उसे अधूरा छोड़ दिया गया है।",Transportation,Hindi,3
+C063,"Main road ka footpath khod diya gaya hai aur use adhoora chhod diya gaya hai.",Transportation,Hinglish,3
+C064,"There is a massive leakage in the overhead water tank of our colony.",Water Supply,English,2
+C065,"हमारी कॉलोनी की ओवरहेड पानी की टंकी में भारी रिसाव हो रहा है।",Water Supply,Hindi,2
+C066,"Humari colony ki overhead pani ki tanki mein massive leakage ho raha hai.",Water Supply,Hinglish,2
+C067,"The public toilets near the bus stand are extremely dirty and unusable.",Sanitation,English,3
+C068,"बस स्टैंड के पास के सार्वजनिक शौचालय बहुत गंदे और अनुपयोगी हैं।",Sanitation,Hindi,3
+C069,"Bus stand ke paas wale public toilets bahut gande aur unusable hain.",Sanitation,Hinglish,3
+C070,"A stray dog was found dead inside the neighborhood park's water fountain.",Sanitation,English,2
+C071,"मोहल्ले के पार्क के फव्वारे के अंदर एक आवारा कुत्ता मृत पाया गया।",Sanitation,Hindi,2
+C072,"Neighborhood park ke fountain ke andar ek awara kutta mara hua mila.",Sanitation,Hinglish,2
+C073,"The speed breaker on Lane 7 is too high and damaging small cars.",Transportation,English,1
+C074,"गली नंबर 7 का स्पीड ब्रेकर बहुत ऊंचा है और छोटी कारों को नुकसान पहुंचा रहा है।",Transportation,Hindi,1
+C075,"Lane 7 ka speed breaker bahut uncha hai aur choti caron ko damage kar raha hai.",Transportation,Hinglish,1
+C076,"I haven't received the water bill for my house for the last three months.",Water Supply,English,0
+C077,"मुझे पिछले तीन महीनों से अपने घर का पानी का बिल नहीं मिला है।",Water Supply,Hindi,0
+C078,"Mujhe pichle teen mahino se apne ghar ka pani ka bill nahi mila hai.",Water Supply,Hinglish,0
+C079,"The garbage bins in the market area are overflowing and attracting flies.",Sanitation,English,3
+C080,"बाजार क्षेत्र के कूड़ेदान ओवरफ्लो हो रहे हैं और मक्खियों को आकर्षित कर रहे हैं।",Sanitation,Hindi,3
+C081,"Market area ke garbage bins overflow ho rahe hain aur makkhiyan aa rahi hain.",Sanitation,Hinglish,3
+C082,"The traffic light at the school crossing stays red for too long.",Transportation,English,2
+C083,"स्कूल क्रॉसिंग पर ट्रैफिक लाइट बहुत देर तक लाल रहती है।",Transportation,Hindi,2
+C084,"School crossing par traffic light bahut der tak red rehti hai.",Transportation,Hinglish,2
+C085,"The water coming out of the community handpump is yellow in color.",Water Supply,English,1
+C086,"सामुदायिक हैंडपंप से निकलने वाला पानी पीले रंग का है।",Water Supply,Hindi,1
+C087,"Community handpump se nikalne wala pani yellow color ka hai.",Water Supply,Hinglish,1
+C088,"Someone has dumped construction debris on the sidewalk of our street.",Sanitation,English,1
+C089,"किसी ने हमारी गली के फुटपाथ पर निर्माण का मलबा डाल दिया है।",Sanitation,Hindi,1
+C090,"Kisi ne humari gali ke sidewalk par construction malba daal diya hai.",Sanitation,Hinglish,1
+C091,"The bridge over the local canal has developed dangerous cracks.",Transportation,English,3
+C092,"स्थानीय नहर के ऊपर बने पुल में खतरनाक दरारें आ गई हैं।",Transportation,Hindi,3
+C093,"Local canal ke upar wale bridge mein dangerous cracks aa gayi hain.",Transportation,Hinglish,3
+C094,"The water valve near the park is stuck and we cannot stop the flow.",Water Supply,English,2
+C095,"पार्क के पास का पानी का वाल्व फंस गया है और हम बहाव को रोक नहीं पा रहे हैं।",Water Supply,Hindi,2
+C096,"Park ke paas wala water valve stuck ho gaya hai aur hum flow nahi rok paa rahe.",Water Supply,Hinglish,2
+C097,"Large quantities of plastic waste are blocked in the main city drain.",Sanitation,English,3
+C098,"शहर के मुख्य नाले में बड़ी मात्रा में प्लास्टिक कचरा फंस गया है।",Sanitation,Hindi,3
+C099,"Shehar ke main naale mein bohot saara plastic waste block ho gaya hai.",Sanitation,Hinglish,3
+C100,"The street name sign at the entrance of our block has fallen off.",Transportation,English,1
+C101,"हमारे ब्लॉक के प्रवेश द्वार पर लगा सड़क के नाम का बोर्ड गिर गया है।",Transportation,Hindi,1
+C102,"Humare block ke entrance wala street name sign niche gir gaya hai.",Transportation,Hinglish,1
+C103,"My apartment's water meter is running even when all taps are closed.",Water Supply,English,0
+C104,"मेरे अपार्टमेंट का पानी का मीटर तब भी चल रहा है जब सभी नल बंद हैं।",Water Supply,Hindi,0
+C105,"Mere apartment ka water meter chal raha hai jabki saare taps band hain.",Water Supply,Hinglish,0
+C106,"The sweeping staff is burning dry leaves in the open, causing smoke.",Sanitation,English,2
+C107,"सफाई कर्मचारी खुले में सूखे पत्ते जला रहे हैं, जिससे धुआं हो रहा है।",Sanitation,Hindi,2
+C108,"Sweeping staff khule mein sukhe patte jala rahe hain, jis se dhuaan ho raha hai.",Sanitation,Hinglish,2
+C109,"Auto-rickshaws are blocking the bus stop, making it hard for commuters.",Transportation,English,3
+C110,"ऑटो-रिक्शा बस स्टॉप को ब्लॉक कर रहे हैं, जिससे यात्रियों को परेशानी हो रही है।",Transportation,Hindi,3
+C111,"Auto-rickshaws bus stop block kar rahe hain, jis se commuters ko dikkat ho rahi hai.",Transportation,Hinglish,3
+C112,"There is a foul smell coming from the water supplied in our lane.",Water Supply,English,1
+C113,"हमारी गली में सप्लाई किए जा रहे पानी से दुर्गंध आ रही है।",Water Supply,Hindi,1
+C114,"Humari lane mein supply hone wale pani se gandi smell aa rahi hai.",Water Supply,Hinglish,1
+C115,"Stagnant water in the potholes is becoming a breeding ground for mosquitoes.",Sanitation,English,2
+C116,"गढ्ढों में जमा पानी मच्छरों के पनपने का स्थान बन रहा है।",Sanitation,Hindi,2
+C117,"Gaddon mein jama pani machharon ke liye breeding ground ban raha hai.",Sanitation,Hinglish,2
+C118,"The zebra crossing outside the primary school has completely faded away.",Transportation,English,2
+C119,"प्राइमरी स्कूल के बाहर जेब्रा क्रॉसिंग पूरी तरह से मिट गई है।",Transportation,Hindi,2
+C120,"Primary school ke bahar zebra crossing poori tarah se mit gayi hai.",Transportation,Hinglish,2
+C121,"The main water tanker for our area did not arrive today as scheduled.",Water Supply,English,2
+C122,"हमारे क्षेत्र के लिए मुख्य पानी का टैंकर आज तय समय पर नहीं आया।",Water Supply,Hindi,2
+C123,"Humare area ka main water tanker aaj schedule ke hisab se nahi aaya.",Water Supply,Hinglish,2
+C124,"Industrial waste is being dumped into the river behind our locality.",Sanitation,English,3
+C125,"हमारी बस्ती के पीछे नदी में औद्योगिक कचरा फेंका जा रहा है।",Sanitation,Hindi,3
+C126,"Humari locality ke peeche nadi mein industrial waste dump kiya ja raha hai.",Sanitation,Hinglish,3
+C127,"The shared pathway in our residential complex is broken and uneven.",Transportation,English,0
+C128,"हमारे आवासीय परिसर का साझा रास्ता टूटा हुआ और असमान है।",Transportation,Hindi,0
+C129,"Humare residential complex ka shared rasta toota hua aur uneven hai.",Transportation,Hinglish,0
+C130,"A underground water pipe has a small crack and is leaking in my garden.",Water Supply,English,0
+C131,"एक भूमिगत पानी के पाइप में छोटी सी दरार है और वह मेरे बगीचे में लीक हो रहा है।",Water Supply,Hindi,0
+C132,"Ek underground water pipe mein crack hai aur wo mere garden mein leak ho raha hai.",Water Supply,Hinglish,0
+C133,"The drains in the vegetable market are choked with rotten vegetables.",Sanitation,English,3
+C134,"सब्जी मंडी की नालियां सड़ी हुई सब्जियों से चोक हो गई हैं।",Sanitation,Hindi,3
+C135,"Sabzi mandi ki naaliyan sadi hui sabziyon se choke ho gayi hain.",Sanitation,Hinglish,3
+C136,"The divider on the highway is broken, leading to illegal U-turns.",Transportation,English,3
+C137,"हाईवे पर डिवाइडर टूटा हुआ है, जिससे अवैध यू-टर्न लिए जा रहे हैं।",Transportation,Hindi,3
+C138,"Highway par divider toota hua hai, jis se illegal U-turns liye ja rahe hain.",Transportation,Hinglish,3
+C139,"The water from the overhead tank is overflowing and wasting since morning.",Water Supply,English,2
+C140,"सुबह से ओवरहेड टैंक का पानी ओवरफ्लो होकर बर्बाद हो रहा है।",Water Supply,Hindi,2
+C141,"Subah se overhead tank ka pani overflow ho raha hai aur waste ho raha hai.",Water Supply,Hinglish,2
+C142,"Medical waste from the local clinic is being thrown into common bins.",Sanitation,English,1
+C143,"स्थानीय क्लिनिक का मेडिकल कचरा सामान्य कूड़ेदानों में फेंका जा रहा है।",Sanitation,Hindi,1
+C144,"Local clinic ka medical waste common bins mein pheka ja raha hai.",Sanitation,Hinglish,1
+C145,"The traffic police booth at the square is abandoned and misused by goons.",Transportation,English,3
+C146,"चौराहे पर ट्रैफिक पुलिस बूथ लावारिस पड़ा है और गुंडों द्वारा इसका दुरुपयोग किया जा रहा है।",Transportation,Hindi,3
+C147,"Square par traffic police booth abandoned hai aur goons uska galat use kar rahe hain.",Transportation,Hinglish,3
+C148,"Water supply timings in our sector have been reduced without any notice.",Water Supply,English,2
+C149,"बिना किसी नोटिस के हमारे सेक्टर में पानी की आपूर्ति का समय कम कर दिया गया है।",Water Supply,Hindi,2
+C150,"Bina kisi notice ke humare sector mein water supply ka time kam kar diya gaya hai.",Water Supply,Hinglish,2
+C151,"A large pile of construction sand is blocking half of the main road.",Transportation,English,3
+C152,"निर्माण रेत का एक बड़ा ढेर मुख्य सड़क के आधे हिस्से को रोक रहा है।",Transportation,Hindi,3
+C153,"Construction sand ka ek bada dher main road ke aadhe hisse ko block kar raha hai.",Transportation,Hinglish,3
+C154,"The drainage cover outside my house is broken and smells terrible.",Sanitation,English,0
+C155,"मेरे घर के बाहर ड्रेनेज का ढक्कन टूटा हुआ है और बहुत बदबू आ रही है।",Sanitation,Hindi,0
+C156,"Mere ghar ke bahar drainage cover toota hua hai aur gandi smell aa rahi hai.",Sanitation,Hinglish,0
+C157,"The local public park has no water for the plants and they are dying.",Water Supply,English,2
+C158,"स्थानीय सार्वजनिक पार्क में पौधों के लिए पानी नहीं है और वे मर रहे हैं।",Water Supply,Hindi,2
+C159,"Local public park mein plants ke liye pani nahi hai aur wo mar rahe hain.",Water Supply,Hinglish,2
+C160,"The road signs near the highway exit are covered in posters and invisible.",Transportation,English,3
+C161,"हाईवे एग्जिट के पास सड़क के संकेत पोस्टरों से ढके हुए हैं और दिखाई नहीं दे रहे हैं।",Transportation,Hindi,3
+C162,"Highway exit ke paas road signs posters se dhake hue hain aur dikh nahi rahe.",Transportation,Hinglish,3
+C163,"Someone has dumped a broken sofa and furniture in the street lane.",Sanitation,English,1
+C164,"किसी ने गली में एक टूटा हुआ सोफा और फर्नीचर फेंक दिया है।",Sanitation,Hindi,1
+C165,"Kisi ne street lane mein toota hua sofa aur furniture phenk diya hai.",Sanitation,Hinglish,1
+C166,"Water is leaking from the main joint of the colony's supply line.",Water Supply,English,2
+C167,"कॉलोनी की सप्लाई लाइन के मुख्य जोड़ से पानी रिस रहा है।",Water Supply,Hindi,2
+C168,"Colony ki supply line ke main joint se pani leak ho raha hai.",Water Supply,Hinglish,2
+C169,"The traffic lights at the main junction are stuck on red for 10 minutes.",Transportation,English,3
+C170,"मुख्य जंक्शन पर ट्रैफिक लाइट 10 मिनट से लाल रंग पर अटकी हुई है।",Transportation,Hindi,3
+C171,"Main junction par traffic lights 10 minutes se red par stuck hain.",Transportation,Hinglish,3
+C172,"The garbage van did not play the music or announce its arrival today.",Sanitation,English,2
+C173,"कूड़ा ढोने वाली गाड़ी ने आज संगीत नहीं बजाया और न ही अपने आने की घोषणा की।",Sanitation,Hindi,2
+C174,"Kachra van ne aaj music nahi bajaya aur na hi announce kiya ki wo aa gayi hai.",Sanitation,Hinglish,2
+C175,"There is no water in the toilets of the city railway station.",Water Supply,English,3
+C176,"शहर के रेलवे स्टेशन के शौचालयों में पानी नहीं है।",Water Supply,Hindi,3
+C177,"City railway station ke toilets mein pani nahi hai.",Water Supply,Hinglish,3
+C178,"The streetlights in our lane are on even during the daytime.",Transportation,English,1
+C179,"हमारी गली की स्ट्रीट लाइटें दिन के समय भी जलती रहती हैं।",Transportation,Hindi,1
+C180,"Humari lane ki streetlights din ke time bhi on rehti hain.",Transportation,Hinglish,1
+C181,"The slaughterhouse waste is being thrown into the open drain nearby.",Sanitation,English,3
+C182,"कसाईखाने का कचरा पास के खुले नाले में फेंका जा रहा है।",Sanitation,Hindi,3
+C183,"Slaughterhouse ka kachra paas ke khule naale mein pheka ja raha hai.",Sanitation,Hinglish,3
+C184,"I am getting very muddy water in my kitchen tap since yesterday.",Water Supply,English,0
+C185,"कल से मेरे किचन के नल में बहुत मटमैला पानी आ रहा है।",Water Supply,Hindi,0
+C186,"Kal se mere kitchen tap mein bohot mitti wala pani aa raha hai.",Water Supply,Hinglish,0
+C187,"The bus arriving at the colony stop is always overcrowded and dangerous.",Transportation,English,2
+C188,"कॉलोनी स्टॉप पर आने वाली बस हमेशा खचाखच भरी और खतरनाक होती है।",Transportation,Hindi,2
+C189,"Colony stop par aane wali bus hamesha overcrowded aur dangerous hoti hai.",Transportation,Hinglish,2
+C190,"The drainage water is flowing back into my bathroom pipes.",Sanitation,English,0
+C191,"ड्रेनेज का पानी मेरे बाथरूम के पाइपों में वापस बह रहा है।",Sanitation,Hindi,0
+C192,"Drainage ka pani mere bathroom pipes mein wapas aa raha hai.",Sanitation,Hinglish,0
+C193,"The water level in the society well has gone down significantly.",Water Supply,English,2
+C194,"सोसाइटी के कुएं में पानी का स्तर काफी नीचे चला गया है।",Water Supply,Hindi,2
+C195,"Society ke kuen mein pani ka level kaafi neeche chala gaya hai.",Water Supply,Hinglish,2
+C196,"A fallen electric pole is blocking the entrance to the market.",Transportation,English,3
+C197,"बिजली का एक गिरा हुआ खंभा बाजार के प्रवेश द्वार को रोक रहा है।",Transportation,Hindi,3
+C198,"Ek gira hua electric pole market ke entrance ko block kar raha hai.",Transportation,Hinglish,3
+C199,"Stray cows are eating plastic from the trash pile in the middle of the road.",Sanitation,English,2
+C200,"सड़क के बीच में कचरे के ढेर से आवारा गायें प्लास्टिक खा रही हैं।",Sanitation,Hindi,2
+C201,"Road ke beech kachre ke dher se awara gayein plastic kha rahi hain.",Sanitation,Hinglish,2
+C202,"The public water cooler at the park has been dry for a month.",Water Supply,English,2
+C203,"पार्क का सार्वजनिक वाटर कूलर एक महीने से सूखा पड़ा है।",Water Supply,Hindi,2
+C204,"Park ka public water cooler ek mahine se sookha pada hai.",Water Supply,Hinglish,2
+C205,"The road marking paint is so fresh that it is sticking to car tires.",Transportation,English,3
+C206,"सड़क पर पेंट इतना ताजा है कि वह कारों के टायरों से चिपक रहा है।",Transportation,Hindi,3
+C207,"Road marking paint itna fresh hai ki wo car tires par chipak raha hai.",Transportation,Hinglish,3
+C208,"There is a massive blockage in the sewer line of our apartment block.",Sanitation,English,2
+C209,"हमारे अपार्टमेंट ब्लॉक की सीवर लाइन में भारी ब्लॉकेज है।",Sanitation,Hindi,2
+C210,"Humare apartment block ki sewer line mein massive blockage hai.",Sanitation,Hinglish,2
+C211,"The municipal water has a strong smell of chlorine today.",Water Supply,English,1
+C212,"आज नगर पालिका के पानी में क्लोरीन की तेज गंध आ रही है।",Water Supply,Hindi,1
+C213,"Aaj municipal water mein chlorine ki tez smell aa rahi hai.",Water Supply,Hinglish,1
+C214,"The bicycle track is being used by motorbikes, making it unsafe.",Transportation,English,2
+C215,"साइकिल ट्रैक का उपयोग मोटरबाइकों द्वारा किया जा रहा है, जिससे यह असुरक्षित हो गया है।",Transportation,Hindi,2
+C216,"Bicycle track motorbikes use kar rahi hain, jis se unsafe ho gaya hai.",Transportation,Hinglish,2
+C217,"The waste from the local hospital is not being disposed of properly.",Sanitation,English,3
+C218,"स्थानीय अस्पताल के कचरे का ठीक से निपटान नहीं किया जा रहा है।",Sanitation,Hindi,3
+C219,"Local hospital ka waste theek se dispose nahi kiya ja raha hai.",Sanitation,Hinglish,3
+C220,"My garden tap has very low pressure compared to the other taps.",Water Supply,English,0
+C221,"मेरे बगीचे के नल में अन्य नलों की तुलना में बहुत कम दबाव है।",Water Supply,Hindi,0
+C222,"Mere garden tap mein baki taps ke mukable bohot low pressure hai.",Water Supply,Hinglish,0
+C223,"A thick layer of dust from the road construction is entering our houses.",Sanitation,English,2
+C224,"सड़क निर्माण से उड़ने वाली धूल की मोटी परत हमारे घरों में घुस रही है।",Sanitation,Hindi,2
+C225,"Road construction ki dhool ki moti layer humare gharon mein ghus rahi hai.",Sanitation,Hinglish,2
+C226,"The street light pole near the corner is leaning dangerously.",Transportation,English,1
+C227,"कोने के पास वाला स्ट्रीट लाइट का खंभा खतरनाक तरीके से झुका हुआ है।",Transportation,Hindi,1
+C228,"Corner ke paas wala street light pole dangerously jhuka hua hai.",Transportation,Hinglish,1
+C229,"The water supply was cut off today without any prior announcement.",Water Supply,English,2
+C230,"आज बिना किसी पूर्व घोषणा के पानी की आपूर्ति काट दी गई।",Water Supply,Hindi,2
+C231,"Aaj bina kisi announcement ke water supply cut kar di gayi.",Water Supply,Hinglish,2
+C232,"The storm drain is full of dry leaves and will flood if it rains.",Sanitation,English,2
+C233,"तूफानी नाला सूखे पत्तों से भरा है और बारिश होने पर बाढ़ आ जाएगी।",Sanitation,Hindi,2
+C234,"Storm drain sukhe patton se bhara hai, baarish hui toh flood ho jayega.",Sanitation,Hinglish,2
+C235,"A pothole on the main flyover caused a minor accident this morning.",Transportation,English,3
+C236,"मुख्य फ्लाईओवर पर एक गड्ढे के कारण आज सुबह एक मामूली दुर्घटना हुई।",Transportation,Hindi,3
+C237,"Main flyover ke ek gadde ki wajah se aaj subah ek accident hua.",Transportation,Hinglish,3
+C238,"The valve in the main street is broken and spraying water everywhere.",Water Supply,English,1
+C239,"मुख्य गली का वाल्व टूट गया है और हर जगह पानी का छिड़काव हो रहा है।",Water Supply,Hindi,1
+C240,"Main street ka valve toot gaya hai aur har jagah pani spray ho raha hai.",Water Supply,Hinglish,1
+C241,"Garbage is being dumped behind the neighborhood school building.",Sanitation,English,2
+C242,"मोहल्ले के स्कूल की इमारत के पीछे कूड़ा फेंका जा रहा है।",Sanitation,Hindi,2
+C243,"Neighborhood school building ke peeche kachra pheka ja raha hai.",Sanitation,Hinglish,2
+C244,"The traffic signal timer is not visible due to sunlight glare.",Transportation,English,3
+C245,"सूरज की रोशनी की चमक के कारण ट्रैफिक सिग्नल टाइमर दिखाई नहीं दे रहा है।",Transportation,Hindi,3
+C246,"Dhoop ki wajah se traffic signal timer dikhai nahi de raha hai.",Transportation,Hinglish,3
+C247,"The water in the public fountain is green and full of algae.",Water Supply,English,2
+C248,"सार्वजनिक फव्वारे का पानी हरा है और काई से भरा है।",Water Supply,Hindi,2
+C249,"Public fountain ka pani hara hai aur algae se bhara hua hai.",Water Supply,Hinglish,2
+C250,"The public dustbins are missing from the newly built bus shelter.",Sanitation,English,3
+C251,"सेक्शन के नए बस शेल्टर से सार्वजनिक कूड़ेदान गायब हैं।",Sanitation,Hindi,3
+C252,"Naye bus shelter se public dustbins missing hain.",Sanitation,Hinglish,3
+C253,"The street light outside my main gate has a short circuit and is sparking.",Transportation,English,0
+C254,"मेरे मुख्य गेट के बाहर की स्ट्रीट लाइट में शॉर्ट सर्किट हो गया है और चिंगारी निकल रही है।",Transportation,Hindi,0
+C255,"Mere main gate wali street light mein short circuit ho gaya hai aur sparks nikal rahe hain.",Transportation,Hinglish,0
+C256,"A massive water leak has started in the middle of the main market square.",Water Supply,English,3
+C257,"मुख्य बाजार के चौक के बीचों-बीच पानी का भारी रिसाव शुरू हो गया है।",Water Supply,Hindi,3
+C258,"Main market square ke beech mein bada water leak ho raha hai.",Water Supply,Hinglish,3
+C259,"The open drain near the primary school is clogged with plastic bottles.",Sanitation,English,2
+C260,"प्राइमरी स्कूल के पास का खुला नाला प्लास्टिक की बोतलों से भरा पड़ा है।",Sanitation,Hindi,2
+C261,"Primary school ke paas wala khula naala plastic bottles se block ho gaya hai.",Sanitation,Hinglish,2
+C262,"The footpath tiles have come loose and people are tripping over them.",Transportation,English,2
+C263,"फुटपाथ की टाइलें ढीली हो गई हैं और लोग उनसे टकराकर गिर रहे हैं।",Transportation,Hindi,2
+C264,"Footpath ki tiles loose ho gayi hain aur log gir rahe hain.",Transportation,Hinglish,2
+C265,"My bathroom tap water has a very oily texture today.",Water Supply,English,0
+C266,"आज मेरे बाथरूम के नल के पानी में बहुत तैलीय बनावट है।",Water Supply,Hindi,0
+C267,"Aaj mere bathroom tap ke pani mein oil jaisa chipchipapan hai.",Water Supply,Hinglish,0
+C268,"Dead leaves are being swept into the drainage pipes by the cleaning staff.",Sanitation,English,1
+C269,"सफाई कर्मचारियों द्वारा सूखे पत्तों को ड्रेनेज पाइप में धकेला जा रहा है।",Sanitation,Hindi,1
+C270,"Cleaning staff sukhe patte drainage pipes mein daal rahe hain.",Sanitation,Hinglish,1
+C271,"The traffic intersection is completely blocked because the signals are off.",Transportation,English,3
+C272,"ट्रैफिक चौराहा पूरी तरह से अवरुद्ध है क्योंकि सिग्नल बंद हैं।",Transportation,Hindi,3
+C273,"Traffic intersection pura block hai kyunki signals off hain.",Transportation,Hinglish,3
+C274,"The water supply pipe in Lane 3 has a hairline crack and is spraying.",Water Supply,English,1
+C275,"गली नंबर 3 में पानी की आपूर्ति वाले पाइप में दरार है और पानी छिड़क रहा है।",Water Supply,Hindi,1
+C276,"Lane 3 ki water supply pipe mein crack hai aur pani udd raha hai.",Water Supply,Hinglish,1
+C277,"Construction workers are throwing cement bags into the neighborhood pond.",Sanitation,English,2
+C278,"निर्माण श्रमिक मोहल्ले के तालाब में सीमेंट की बोरियां फेंक रहे हैं।",Sanitation,Hindi,2
+C279,"Construction workers neighborhood pond mein cement bags pheka rahe hain.",Sanitation,Hinglish,2
+C280,"The height of the speed breaker on the highway is illegal and dangerous.",Transportation,English,3
+C281,"हाईवे पर स्पीड ब्रेकर की ऊंचाई अवैध और खतरनाक है।",Transportation,Hindi,3
+C282,"Highway wale speed breaker ki height illegal aur dangerous hai.",Transportation,Hinglish,3
+C283,"The common washbasin in our block has a major leakage underneath.",Water Supply,English,1
+C284,"हमारे ब्लॉक के कॉमन वॉशबेसिन के नीचे भारी रिसाव हो रहा है।",Water Supply,Hindi,1
+C285,"Humare block ke common washbasin ke neeche bada leakage ho raha hai.",Water Supply,Hinglish,1
+C286,"A heap of electronic waste has been dumped at the corner of the park.",Sanitation,English,2
+C287,"पार्क के कोने में इलेक्ट्रॉनिक कचरे का ढेर लगा दिया गया है।",Sanitation,Hindi,2
+C288,"Park ke corner mein e-waste ka dher laga diya gaya hai.",Sanitation,Hinglish,2
+C289,"The manhole cover on the main bridge is missing and it's a death trap.",Transportation,English,3
+C290,"मुख्य पुल पर मैनहोल का ढक्कन गायब है और यह जानलेवा साबित हो सकता है।",Transportation,Hindi,3
+C291,"Main bridge par manhole cover missing hai, bohot dangerous hai.",Transportation,Hinglish,3
+C292,"Our colony’s motor pump has burnt out and there is no water for anyone.",Water Supply,English,2
+C293,"हमारी कॉलोनी का मोटर पंप जल गया है और किसी के लिए पानी नहीं है।",Water Supply,Hindi,2
+C294,"Humari colony ka motor pump phuk gaya hai, pani bilkul nahi aa raha.",Water Supply,Hinglish,2
+C295,"Raw sewage is leaking from a pipe onto the public walking track.",Sanitation,English,2
+C296,"एक पाइप से कच्चा सीवेज सार्वजनिक वॉकिंग ट्रैक पर लीक हो रहा है।",Sanitation,Hindi,2
+C297,"Public walking track par ek pipe se sewage ka ganda pani leak ho raha hai.",Sanitation,Hinglish,2
+C298,"The road median is broken and people are using it as a dangerous shortcut.",Transportation,English,2
+C299,"सड़क का डिवाइडर टूटा हुआ है और लोग इसे खतरनाक शॉर्टकट के रूप में उपयोग कर रहे हैं।",Transportation,Hindi,2
+C300,"Road median toota hai aur log wahan se khatarnak shortcut le rahe hain.",Transportation,Hinglish,2
+C301,"The water pressure in the top floor apartments is almost zero.",Water Supply,English,2
+C302,"ऊपरी मंजिल के अपार्टमेंट में पानी का दबाव लगभग शून्य है।",Water Supply,Hindi,2
+C303,"Top floor apartments mein water pressure zero ho gaya hai.",Water Supply,Hinglish,2
+C304,"Someone has thrown broken glass and nails on the service road.",Sanitation,English,3
+C305,"किसी ने सर्विस रोड पर टूटे हुए कांच और कीलें फेंक दी हैं।",Sanitation,Hindi,3
+C306,"Kisi ne service road par toota hua kanch aur kilein phek di hain.",Sanitation,Hinglish,3
+C307,"The bus for Route 402 never stops at our local stand anymore.",Transportation,English,1
+C308,"रूट 402 की बस अब हमारे स्थानीय स्टैंड पर कभी नहीं रुकती।",Transportation,Hindi,1
+C309,"Route 402 ki bus ab humare local stand par nahi rukti.",Transportation,Hinglish,1
+C310,"There is a dead bird floating in the community water storage tank.",Water Supply,English,2
+C311,"सामुदायिक जल भंडारण टैंक में एक मृत पक्षी तैर रहा है।",Water Supply,Hindi,2
+C312,"Community water tank mein ek mara hua chidiya tair raha hai.",Water Supply,Hinglish,2
+C313,"The dustbins in the railway station are overflowing with food waste.",Sanitation,English,3
+C314,"रेलवे स्टेशन के कूड़ेदान खाने के कचरे से भरे हुए हैं।",Sanitation,Hindi,3
+C315,"Railway station ke bins food waste se bhare pade hain.",Sanitation,Hinglish,3
+C316,"The incline of the parking ramp is too steep for standard cars.",Transportation,English,0
+C317,"पार्किंग रैंप की ढलान मानक कारों के लिए बहुत अधिक है।",Transportation,Hindi,0
+C318,"Parking ramp ki dhalan caron ke liye bohot zyada steep hai.",Transportation,Hinglish,0
+C319,"I found worms in the drinking water supplied this morning.",Water Supply,English,1
+C320,"मुझे आज सुबह सप्लाई किए गए पीने के पानी में कीड़े मिले।",Water Supply,Hindi,1
+C321,"Aaj subah ke pine wale pani mein kide mile hain.",Water Supply,Hinglish,1
+C322,"Public walls are being defaced with posters and illegal advertisements.",Sanitation,English,2
+C323,"सार्वजनिक दीवारों पर पोस्टर और अवैध विज्ञापन लगाकर उन्हें खराब किया जा रहा है।",Sanitation,Hindi,2
+C324,"Public walls par posters aur illegal ads lagaye ja rahe hain.",Sanitation,Hinglish,2
+C325,"The bridge railings are rusted and may collapse at any time.",Transportation,English,3
+C326,"पुल की रेलिंग में जंग लग गया है और वे किसी भी समय गिर सकती हैं।",Transportation,Hindi,3
+C327,"Bridge railings mein jung lag gaya hai aur wo kabhi bhi gir sakti hain.",Transportation,Hinglish,3
+C328,"The main water line valve is making a loud vibrating noise.",Water Supply,English,2
+C329,"मुख्य जल लाइन का वाल्व तेज कंपन की आवाज कर रहा है।",Water Supply,Hindi,2
+C330,"Main water line valve se bohot tez vibration ki awaz aa rahi hai.",Water Supply,Hinglish,2
+C331,"The garbage collection person is demanding extra money for pick up.",Sanitation,English,0
+C332,"कूड़ा इकट्ठा करने वाला व्यक्ति कचरा उठाने के लिए अतिरिक्त पैसे मांग रहा है।",Sanitation,Hindi,0
+C333,"Kachra uthane wala banda extra paise maang raha hai.",Sanitation,Hinglish,0
+C334,"The temporary road built for the festival is full of sharp stones.",Transportation,English,2
+C335,"त्योहार के लिए बनाई गई अस्थायी सड़क नुकीले पत्थरों से भरी है।",Transportation,Hindi,2
+C336,"Festival wali temporary road nukile pattharon se bhari hui hai.",Transportation,Hinglish,2
+C337,"We are getting water only for 10 minutes every day now.",Water Supply,English,1
+C338,"अब हमें हर दिन केवल 10 मिनट के लिए ही पानी मिल रहा है।",Water Supply,Hindi,1
+C339,"Humein ab har din sirf 10 minutes pani mil raha hai.",Water Supply,Hinglish,1
+C340,"Chemical waste is leaking from the factory drain into the street.",Sanitation,English,3
+C341,"फैक्ट्री के नाले से रासायनिक कचरा सड़क पर रिस रहा है।",Sanitation,Hindi,3
+C342,"Factory drain se chemical waste sadak par leak ho raha hai.",Sanitation,Hinglish,3
+C343,"The street light pole has an open wire dangling at shoulder height.",Transportation,English,1
+C344,"स्ट्रीट लाइट के खंभे से एक खुला तार कंधे की ऊंचाई पर लटक रहा है।",Transportation,Hindi,1
+C345,"Street light pole se khula taar latak raha hai, bohot dangerous hai.",Transportation,Hinglish,1
+C346,"The public tap is missing its handle and water is continuously flowing.",Water Supply,English,1
+C347,"सार्वजनिक नल का हैंडल गायब है और पानी लगातार बह रहा है।",Water Supply,Hindi,1
+C348,"Public tap ka handle missing hai aur pani lagatar beh raha hai.",Water Supply,Hinglish,1
+C349,"The cleaning staff has dumped the street sweepings near the park gate.",Sanitation,English,2
+C350,"सफाई कर्मचारियों ने सड़क की गंदगी पार्क के गेट के पास डाल दी है।",Sanitation,Hindi,2
+C351,"Cleaning staff ne sadak ki gandagi park ke gate ke paas daal di hai.",Sanitation,Hinglish,2
+C352,"The metro station exit is blocked by construction debris.",Transportation,English,3
+C353,"मेट्रो स्टेशन का निकास निर्माण मलबे से अवरुद्ध है।",Transportation,Hindi,3
+C354,"Metro station exit construction malbe se block ho gaya hai.",Transportation,Hinglish,3
+C355,"Our apartment's fire hydrant system has no water pressure.",Water Supply,English,2
+C356,"हमारे अपार्टमेंट के फायर हाइड्रेंट सिस्टम में पानी का दबाव नहीं है।",Water Supply,Hindi,2
+C357,"Humare apartment ke fire hydrant system mein pani ka pressure nahi hai.",Water Supply,Hinglish,2
+C358,"The bin for dry waste is missing from our street corner.",Sanitation,English,1
+C359,"हमारी गली के कोने से सूखे कचरे का डिब्बा गायब है।",Sanitation,Hindi,1
+C360,"Humari gali ke corner se sukhe kachre ka dustbin missing hai.",Sanitation,Hinglish,1
+C361,"The school bus parking area is full of deep mud and water.",Transportation,English,2
+C362,"स्कूल बस पार्किंग क्षेत्र गहरे कीचड़ और पानी से भरा है।",Transportation,Hindi,2
+C363,"School bus parking area mein bohot kichad aur pani bhara hua hai.",Transportation,Hinglish,2
+C364,"The water from the public cooler tastes like rusted iron.",Water Supply,English,2
+C365,"सार्वजनिक कूलर के पानी का स्वाद जंग लगे लोहे जैसा है।",Water Supply,Hindi,2
+C366,"Public cooler ke pani ka taste jung lage lohe jaisa hai.",Water Supply,Hinglish,2
+C367,"Stagnant sewage water is leaking into the neighborhood playground.",Sanitation,English,2
+C368,"सीवेज का गंदा पानी मोहल्ले के खेल के मैदान में रिस रहा है।",Sanitation,Hindi,2
+C369,"Sewage ka ganda pani neighborhood playground mein leak ho raha hai.",Sanitation,Hinglish,2
+C370,"The newly paved road has started melting in the summer heat.",Transportation,English,3
+C371,"गर्मी के कारण नई बनी सड़क पिघलने लगी है।",Transportation,Hindi,3
+C372,"Garmi ki wajah se nayi road pighalne lagi hai.",Transportation,Hinglish,3
+C373,"My water meter glass is broken and I cannot read the units.",Water Supply,English,0
+C374,"मेरे पानी के मीटर का कांच टूट गया है और मैं यूनिट नहीं पढ़ पा रहा हूँ।",Water Supply,Hindi,0
+C375,"Mere water meter ka glass toot gaya hai aur units nahi dikh rahe.",Water Supply,Hinglish,0
+C376,"Public dustbins are being stolen from the local market area.",Sanitation,English,3
+C377,"स्थानीय बाजार क्षेत्र से सार्वजनिक कूड़ेदान चोरी हो रहे हैं।",Sanitation,Hindi,3
+C378,"Local market area se public dustbins chori ho rahe hain.",Sanitation,Hinglish,3
+C379,"The speed signs on the flyover are twisted and facing the wrong way.",Transportation,English,3
+C380,"फ्लाईओवर पर गति संकेत मुड़े हुए हैं और गलत दिशा में हैं।",Transportation,Hindi,3
+C381,"Flyover ke speed signs mude hue hain aur galat side face kar rahe hain.",Transportation,Hinglish,3
+C382,"The community handpump handle is loose and about to fall off.",Water Supply,English,1
+C383,"सामुदायिक हैंडपंप का हैंडल ढीला है और गिरने वाला है।",Water Supply,Hindi,1
+C384,"Community handpump ka handle loose hai aur girne wala hai.",Water Supply,Hinglish,1
+C385,"Illegal dumping of plastic waste is happening near the lake bank.",Sanitation,English,3
+C386,"झील के किनारे प्लास्टिक कचरे का अवैध डंपिंग हो रहा है।",Sanitation,Hindi,3
+C387,"Lake ke kinare plastic waste ka illegal dumping ho raha hai.",Sanitation,Hinglish,3
+C388,"The streetlights near the railway crossing have been off for a week.",Transportation,English,3
+C389,"रेलवे क्रॉसिंग के पास की स्ट्रीट लाइटें एक हफ्ते से बंद हैं।",Transportation,Hindi,3
+C390,"Railway crossing wali streetlights ek hafte se band padi hain.",Transportation,Hinglish,3
+C391,"Water is leaking from the ceiling of the public underground subway.",Water Supply,English,3
+C392,"सार्वजनिक भूमिगत सबवे की छत से पानी रिस रहा है।",Water Supply,Hindi,3
+C393,"Public underground subway ki chat se pani leak ho raha hai.",Water Supply,Hinglish,3
+C394,"The garbage collector is mixing dry and wet waste together.",Sanitation,English,1
+C395,"कूड़ा बीनने वाला सूखे और गीले कचरे को एक साथ मिला रहा है।",Sanitation,Hindi,1
+C396,"Kachra uthane wala sukha aur geela kachra mix kar raha hai.",Sanitation,Hinglish,1
+C397,"There is no divider marking on the dark section of the bypass road.",Transportation,English,3
+C398,"बायपास रोड के अंधेरे हिस्से पर कोई डिवाइडर मार्किंग नहीं है।",Transportation,Hindi,3
+C399,"Bypass road ke andhere wale part mein koi divider marking nahi hai.",Transportation,Hinglish,3
+C400,"The water filter at the government hospital is not working.",Water Supply,English,3
+C401,"सरकारी अस्पताल का वाटर फिल्टर काम नहीं कर रहा है।",Water Supply,Hindi,3
+C402,"Govt hospital ka water filter kaam nahi kar raha hai.",Water Supply,Hinglish,3
+C403,"Someone has abandoned an old car in the middle of our lane.",Sanitation,English,1
+C404,"किसी ने हमारी गली के बीच में एक पुरानी कार लावारिस छोड़ दी है।",Sanitation,Hindi,1
+C405,"Kisi ne humari lane ke beech mein ek purani car abandon kar di hai.",Sanitation,Hinglish,1
+C406,"The pavement near the bus stop has completely collapsed.",Transportation,English,3
+C407,"बस स्टॉप के पास का फुटपाथ पूरी तरह से ढह गया है।",Transportation,Hindi,3
+C408,"Bus stop ke paas wala pavement pura dhas gaya hai.",Transportation,Hinglish,3
+C409,"Our sector's water supply has a very high concentration of salt.",Water Supply,English,2
+C410,"हमारे सेक्टर की जल आपूर्ति में नमक की मात्रा बहुत अधिक है।",Water Supply,Hindi,2
+C411,"Humare sector ke water supply mein namak bohot zyada hai.",Water Supply,Hinglish,2
+C412,"Drainage water is leaking into the fresh water storage of the hotel.",Sanitation,English,3
+C413,"होटल के ताजे पानी के भंडारण में ड्रेनेज का पानी रिस रहा है।",Sanitation,Hindi,3
+C414,"Hotel ke fresh water storage mein drainage ka pani leak ho raha hai.",Sanitation,Hinglish,3
+C415,"The manhole in the middle of the residential street is vibrating.",Transportation,English,1
+C416,"आवासीय सड़क के बीच में लगा मैनहोल कंपन कर रहा है।",Transportation,Hindi,1
+C417,"Residential street ke beech wala manhole vibrate kar raha hai.",Transportation,Hinglish,1
+C418,"The main tap at the public park is leaking continuously.",Water Supply,English,2
+C419,"सार्वजनिक पार्क का मुख्य नल लगातार लीक हो रहा है।",Water Supply,Hindi,2
+C420,"Public park ka main tap lagatar leak ho raha hai.",Water Supply,Hinglish,2
+C421,"Gutters are overflowing with black sludge near the local market.",Sanitation,English,3
+C422,"स्थानीय बाजार के पास गटर काले कीचड़ से लबालब भरे हुए हैं।",Sanitation,Hindi,3
+C423,"Local market ke paas gutters kale kichad se overflow ho rahe hain.",Sanitation,Hinglish,3
+C424,"Street parking signs are missing, leading to confusion and fines.",Transportation,English,2
+C425,"स्ट्रीट पार्किंग के संकेत गायब हैं, जिससे भ्रम और जुर्माना हो रहा है।",Transportation,Hindi,2
+C426,"Street parking signs missing hain, jis se confusion aur fine ho raha hai.",Transportation,Hinglish,2
+C427,"I haven't received water in my flat for the last 48 hours.",Water Supply,English,0
+C428,"मुझे पिछले 48 घंटों से अपने फ्लैट में पानी नहीं मिला है।",Water Supply,Hindi,0
+C429,"Pichle 48 hours se mere flat mein pani nahi aaya hai.",Water Supply,Hinglish,0
+C430,"The cleaning truck leaks oil all over the road during pickup.",Sanitation,English,2
+C431,"कूड़ा उठाने वाला ट्रक पिकअप के दौरान पूरी सड़क पर तेल टपकाता है।",Sanitation,Hindi,2
+C432,"Kachra truck pickup ke time poori road par oil leak karta hai.",Sanitation,Hinglish,2
+C433,"The traffic cone at the construction site has fallen into the pit.",Transportation,English,1
+C434,"निर्माण स्थल पर ट्रैफिक कोन गड्ढे में गिर गया है।",Transportation,Hindi,1
+C435,"Construction site wala traffic cone gadde mein gir gaya hai.",Transportation,Hinglish,1
+C436,"The motor room for the colony water tank is flooded with rain water.",Water Supply,English,2
+C437,"कॉलोनी की पानी की टंकी का मोटर रूम बारिश के पानी से भर गया है।",Water Supply,Hindi,2
+C438,"Colony water tank ka motor room baarish ke pani se bhar gaya hai.",Water Supply,Hinglish,2
+C439,"Waste from the street fast food stalls is clogging the side drains.",Sanitation,English,1
+C440,"स्ट्रीट फास्ट फूड स्टालों का कचरा किनारे की नालियों को जाम कर रहा है।",Sanitation,Hindi,1
+C441,"Fast food stalls ka kachra side drains ko jam kar raha hai.",Sanitation,Hinglish,1
+C442,"The road median has gaps that allow people to cross dangerously.",Transportation,English,3
+C443,"सड़क के डिवाइडर में अंतराल है जो लोगों को खतरनाक तरीके से पार करने देता है।",Transportation,Hindi,3
+C444,"Road median mein gaps hain jis se log dangerously cross kar rahe hain.",Transportation,Hinglish,3
+C445,"There is a leak in the high-pressure water pipe near the office area.",Water Supply,English,3
+C446,"कार्यालय क्षेत्र के पास उच्च दबाव वाले पानी के पाइप में रिसाव है।",Water Supply,Hindi,3
+C447,"Office area ke paas high-pressure water pipe mein leak hai.",Water Supply,Hinglish,3
+C448,"The hospital laundry waste is being dumped in an open field.",Sanitation,English,3
+C449,"अस्पताल के लॉन्ड्री कचरे को खुले मैदान में फेंका जा रहा है।",Sanitation,Hindi,3
+C450,"Hospital laundry waste khule maidan mein pheka ja raha hai.",Sanitation,Hinglish,3
+C451,"The road divider near the flyover has shifted, causing lane confusion.",Transportation,English,3
+C452,"फ्लाईओवर के पास का रोड डिवाइडर खिसक गया है, जिससे लेन को लेकर भ्रम हो रहा है।",Transportation,Hindi,3
+C453,"Flyover ke paas wala road divider shift ho gaya hai, lane confusion ho rahi hai.",Transportation,Hinglish,3
+C454,"My kitchen tap water is coming out with a lot of air bubbles and noise.",Water Supply,English,0
+C455,"मेरे किचन के नल के पानी से बहुत सारे हवा के बुलबुले और आवाज आ रही है।",Water Supply,Hindi,0
+C456,"Mere kitchen tap water mein bohot air bubbles aur awaz aa rahi hai.",Water Supply,Hinglish,0
+C457,"The open drain in front of the community center is breeding mosquitoes.",Sanitation,English,2
+C458,"सामुदायिक केंद्र के सामने खुला नाला मच्छरों को पैदा कर रहा है।",Sanitation,Hindi,2
+C459,"Community center ke samne wala khula nala machharon ka ghar ban raha hai.",Sanitation,Hinglish,2
+C460,"A heavy truck has broken the pavement near the neighborhood entrance.",Transportation,English,2
+C461,"एक भारी ट्रक ने मोहल्ले के प्रवेश द्वार के पास के फुटपाथ को तोड़ दिया है।",Transportation,Hindi,2
+C462,"Ek heavy truck ne neighborhood entrance ke paas ka pavement tod diya hai.",Transportation,Hinglish,2
+C463,"The main water valve in the street is leaking and flooding the lane.",Water Supply,English,1
+C464,"गली का मुख्य पानी का वाल्व लीक हो रहा है और गली में पानी भर रहा है।",Water Supply,Hindi,1
+C465,"Street ka main water valve leak ho raha hai aur poori lane mein pani bhar gaya hai.",Water Supply,Hinglish,1
+C466,"The garbage collection point is too close to the local temple entrance.",Sanitation,English,2
+C467,"कचरा संग्रहण बिंदु स्थानीय मंदिर के प्रवेश द्वार के बहुत करीब है।",Sanitation,Hindi,2
+C468,"Kachra collection point local mandir ke entrance ke bohot paas hai.",Sanitation,Hinglish,2
+C469,"The streetlights in the park are constantly flickering every few seconds.",Transportation,English,2
+C470,"पार्क की स्ट्रीट लाइटें हर कुछ सेकंड में लगातार टिमटिमा रही हैं।",Transportation,Hindi,2
+C471,"Park ki streetlights har kuch seconds mein flicker kar rahi hain.",Transportation,Hinglish,2
+C472,"There is a major blockage in the main sewage line of the industrial area.",Sanitation,English,3
+C473,"औद्योगिक क्षेत्र की मुख्य सीवेज लाइन में भारी अवरोध है।",Sanitation,Hindi,3
+C474,"Industrial area ki main sewage line mein bohot bada blockage hai.",Sanitation,Hinglish,3
+C475,"I am getting a very low flow of water in my shower since this morning.",Water Supply,English,0
+C476,"आज सुबह से मेरे शॉवर में पानी का बहाव बहुत कम आ रहा है।",Water Supply,Hindi,0
+C477,"Aaj subah se mere shower mein pani bohot kam aa raha hai.",Water Supply,Hinglish,0
+C478,"The bridge expansion joints are too wide and making the ride bumpy.",Transportation,English,3
+C479,"पुल के एक्सपेंशन जॉइंट्स बहुत चौड़े हैं और सवारी को झटकेदार बना रहे हैं।",Transportation,Hindi,3
+C480,"Bridge ke expansion joints bohot wide hain, ride bohot bumpy ho gayi hai.",Transportation,Hinglish,3
+C481,"The water supplied to the colony has a yellow tint and dirt particles.",Water Supply,English,2
+C482,"कॉलोनी को आपूर्ति किए गए पानी में पीला रंग और गंदगी के कण हैं।",Water Supply,Hindi,2
+C483,"Colony ke pani mein peela rang aur mitti ke particles dikh rahe hain.",Water Supply,Hinglish,2
+C484,"Dead leaves and trash are clogging the rain water harvesting pits.",Sanitation,English,2
+C485,"सूखे पत्ते और कचरा वर्षा जल संचयन के गड्ढों को बंद कर रहे हैं।",Sanitation,Hindi,2
+C486,"Sukhe patte aur kachra rain water harvesting pits ko block kar raha hai.",Sanitation,Hinglish,2
+C487,"The public bus arriving at the station has a broken door.",Transportation,English,3
+C488,"स्टेशन पर आने वाली सरकारी बस का दरवाजा टूटा हुआ है।",Transportation,Hindi,3
+C489,"Station par aane wali public bus ka darwaza toota hua hai.",Transportation,Hinglish,3
+C490,"The water tank lid for our building is missing and birds are entering.",Water Supply,English,1
+C491,"हमारी इमारत की पानी की टंकी का ढक्कन गायब है और पक्षी अंदर जा रहे हैं।",Water Supply,Hindi,1
+C492,"Building ki pani tanki ka dhakkan missing hai aur chidiya andar ja rahi hain.",Water Supply,Hinglish,1
+C493,"The sweeping staff has dumped all the street dirt near the open park.",Sanitation,English,2
+C494,"सफाई कर्मचारियों ने सड़क की सारी गंदगी खुले पार्क के पास डाल दी है।",Sanitation,Hindi,2
+C495,"Sweeping staff ne sadak ki saari dirt open park ke paas daal di hai.",Sanitation,Hinglish,2
+C496,"The road near the construction site has become extremely slippery.",Transportation,English,2
+C497,"निर्माण स्थल के पास की सड़क बहुत फिसलन भरी हो गई है।",Transportation,Hindi,2
+C498,"Construction site ke paas wali road bohot slippery ho gayi hai.",Transportation,Hinglish,2
+C499,"The public tap near the market is missing its nozzle.",Water Supply,English,1
+C500,"बाजार के पास वाले सार्वजनिक नल की नोजल गायब है।",Water Supply,Hindi,1
+C501,"Market wale public tap ki nozzle missing hai.",Water Supply,Hinglish,1
+C502,"Plastic bottles and bags are floating in the residential area pond.",Sanitation,English,2
+C503,"आवासीय क्षेत्र के तालाब में प्लास्टिक की बोतलें और बैग तैर रहे हैं।",Sanitation,Hindi,2
+C504,"Residential area ke pond mein plastic bottles aur bags tair rahe hain.",Sanitation,Hinglish,2
+C505,"The traffic signal pole is leaning over the road dangerously.",Transportation,English,3
+C506,"ट्रैफिक सिग्नल का खंभा सड़क पर खतरनाक तरीके से झुका हुआ है।",Transportation,Hindi,3
+C507,"Traffic signal pole road par dangerously jhuka hua hai.",Transportation,Hinglish,3
+C508,"The expansion joint on the main flyover has separated, making it dangerous for bikes.",Transportation,English,3
+C509,"मुख्य फ्लाईओवर पर एक्सपेंशन जॉइंट अलग हो गया है, जिससे बाइक के लिए यह खतरनाक हो गया है।",Transportation,Hindi,3
+C510,"Main flyover ka expansion joint alag ho gaya hai, bikes ke liye yeh dangerous hai.",Transportation,Hinglish,3
