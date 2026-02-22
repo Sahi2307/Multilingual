@@ -149,24 +149,56 @@ with tab_overview:
 with tab_complaints:
     st.subheader(L["complaints"]["header"])
     
-    complaints = get_all_complaints_global()
+    # Fetch all complaints but handle clustering
+    all_complaints = get_all_complaints_global()
     
-    if not complaints:
+    # Filter: Show only parent complaints (those with is_clustered=0 OR themselves being a parent)
+    # Child complaints have parent_complaint_id set
+    main_complaints = [c for c in all_complaints if not c.get("parent_complaint_id")]
+    
+    if not main_complaints:
         st.info(L["complaints"]["no_complaints"])
     else:
-        # Simple table view
-        df_c = pd.DataFrame(complaints)
-        # Select relevant columns
-        cols_to_show = ["complaint_id", "name", "category", "urgency", "status", "department_name", "official_name"]
-        st.dataframe(df_c[cols_to_show], use_container_width=True)
+        # Prepare DataFrame for display
+        df_display = []
+        for c in main_complaints:
+            size = c.get("cluster_size", 1) or 1
+            is_cluster = size > 1
+            
+            row = {
+                "complaint_id": c["complaint_id"],
+                "name": c["name"],
+                "category": c["category"],
+                "urgency": f"🚨 {c['urgency']}" if c['urgency'] == "Critical" else c['urgency'],
+                "status": c["status"],
+                "reports": f"📁 {size}" if is_cluster else "📄 1",
+                "location": c["location"],
+                "department_name": c["department_name"],
+                "official_name": c.get("official_name") or L['complaints']['unassigned']
+            }
+            df_display.append(row)
+            
+        df_c = pd.DataFrame(df_display)
+        cols_to_show = ["complaint_id", "reports", "category", "urgency", "status", "department_name", "official_name"]
+        st.dataframe(df_c[cols_to_show], use_container_width=True, hide_index=True)
         
-        st.markdown("### Actions")
-        # Assignment Logic
-        c_id = st.selectbox("Select Complaint ID to Assign", options=[c["complaint_id"] for c in complaints], key="c_assign_id")
+        st.markdown("### Actions & Cluster Details")
+        c_id = st.selectbox("Select Complaint/Cluster to Manage", options=[c["complaint_id"] for c in main_complaints], key="c_assign_id")
         
         if c_id:
-            selected_comp = next((c for c in complaints if c["complaint_id"] == c_id), None)
+            selected_comp = next((c for c in main_complaints if c["complaint_id"] == c_id), None)
             if selected_comp:
+                # If it's a cluster, show child complaints
+                if (selected_comp.get("cluster_size", 1) or 1) > 1:
+                    st.write(f"#### 📁 Cluster Reports for {c_id}")
+                    from utils.database import get_child_complaints
+                    children = get_child_complaints(c_id)
+                    if children:
+                        # Add selected parent info to children for full view
+                        all_in_cluster = [selected_comp] + children
+                        df_cluster = pd.DataFrame(all_in_cluster)
+                        st.dataframe(df_cluster[["complaint_id", "text", "location", "created_at"]], use_container_width=True)
+                
                 st.write(f"**Current Official:** {selected_comp['official_name'] or L['complaints']['unassigned']}")
                 
                 # Fetch officials for the relevant department

@@ -205,38 +205,95 @@ class ComplaintProcessor:
     # Clustering helpers
     # ------------------------------------------------------------------
 
+    def extract_coordinates(self, location: str) -> Optional[Tuple[float, float]]:
+        """Extract lat/lon from location string if present.
+        
+        Expected format: 'Address (Lat: 12.3, Lon: 77.4)' or similar.
+        """
+        import re
+        # Look for (Lat: X, Lon: Y) pattern
+        match = re.search(r'\(Lat:\s*([-\d.]+),\s*Lon:\s*([-\d.]+)\)', location)
+        if match:
+            try:
+                return float(match.group(1)), float(match.group(2))
+            except ValueError:
+                return None
+        return None
+
+    def haversine_distance(self, lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+        """Calculate the great circle distance between two points on the earth."""
+        import math
+        R = 6371.0 # Earth radius in km
+        
+        d_lat = math.radians(lat2 - lat1)
+        d_lon = math.radians(lon2 - lon1)
+        
+        a = math.sin(d_lat / 2)**2 + math.cos(math.radians(lat1)) * \
+            math.cos(math.radians(lat2)) * math.sin(d_lon / 2)**2
+        c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+        return R * c
+
     def find_similar_complaints(
         self,
         category: str,
         location: str,
+        text: str,
         threshold: float = 0.6,
+        radius_km: float = 2.0,
     ) -> Optional[Dict[str, Any]]:
-        """Find an existing active complaint that matches the category and location.
+        """Find an existing active complaint that matches the category and proximity.
         
-        Uses difflib.SequenceMatcher for fuzzy location matching.
-        Returns the 'Parent' complaint if a match is found.
+        Priority 1: GPS Proximity (if coordinates available).
+        Priority 2: String similarity (Difflib).
         """
         from difflib import SequenceMatcher
         from utils.database import list_active_complaints_by_category
-
+        
         candidates = list_active_complaints_by_category(category, project_root=self.project_root)
+        if not candidates:
+            return None
+
+        # Try to get coordinates for the new complaint
+        coords_new = self.extract_coordinates(location)
         
         best_match = None
-        best_ratio = 0.0
+        best_dist = float('inf')
+        
+        # 1. Try GPS match
+        if coords_new:
+            for comp in candidates:
+                coords_old = self.extract_coordinates(comp.get("location", ""))
+                if coords_old:
+                    dist = self.haversine_distance(coords_new[0], coords_new[1], coords_old[0], coords_old[1])
+                    if dist <= radius_km and dist < best_dist:
+                        best_dist = dist
+                        best_match = comp
+            if best_match:
+                return best_match
 
+        # 2. Fallback to Location String + Text Content Similarity
+        best_ratio = 0.0
         for comp in candidates:
-            # Compare locations
-            # We normalize by lowercasing
             loc1 = location.lower()
             loc2 = (comp.get("location") or "").lower()
             
-            ratio = SequenceMatcher(None, loc1, loc2).ratio()
-            if ratio > best_ratio:
-                best_ratio = ratio
+            # Combine location similarity and text similarity
+            loc_ratio = SequenceMatcher(None, loc1, loc2).ratio()
+            
+            # Optional: check text similarity too for higher accuracy
+            text1 = text.lower()
+            text2 = (comp.get("text") or "").lower()
+            text_ratio = SequenceMatcher(None, text1[:100], text2[:100]).ratio()
+            
+            combined_ratio = (loc_ratio * 0.7) + (text_ratio * 0.3)
+            
+            if combined_ratio > best_ratio:
+                best_ratio = combined_ratio
                 best_match = comp
 
         if best_ratio >= threshold:
             return best_match
+            
         return None
 
     # ------------------------------------------------------------------
@@ -358,11 +415,12 @@ class ComplaintProcessor:
         from utils.database import update_record
         
         # Check for similar complaints
-        parent_complaint = self.find_similar_complaints(effective_category, location)
+        parent_complaint = self.find_similar_complaints(effective_category, location, complaint_text)
         
         is_clustered = False
         parent_id = None
         cluster_size = 1
+        final_urgency = urg_label
         
         if parent_complaint:
             # We found a match! This new complaint will be a child.
@@ -373,34 +431,34 @@ class ComplaintProcessor:
             current_size = parent_complaint.get("cluster_size", 1) or 1
             new_size = current_size + 1
             
-            # Auto-escalation Logic
+            # Strict Urgency Escalation Logic:
+            # If size >= 5, set to Critical (First Priority)
+            # If size >= 3, set to High (Medium/Low elevated)
             parent_urgency = parent_complaint.get("urgency", "Low")
-            new_urgency = parent_urgency
+            target_urgency = parent_urgency
             
-            upgraded = False
-            if new_size > 3 and parent_urgency not in ["Critical", "High"]:
-                 new_urgency = "High"
-                 upgraded = True
-            elif new_size > 5 and parent_urgency != "Critical":
-                 new_urgency = "Critical"
-                 upgraded = True
+            if new_size >= 5:
+                target_urgency = "Critical"
+            elif new_size >= 3:
+                 if parent_urgency in ["Low", "Medium"]:
+                    target_urgency = "High"
+            
+            upgraded = (target_urgency != parent_urgency)
+            final_urgency = target_urgency # Children inherit cluster urgency
             
             update_data = {"cluster_size": new_size}
             if upgraded:
-                update_data["urgency"] = new_urgency
+                update_data["urgency"] = target_urgency
                 # Insert system status update for escalation
                 insert_status_update(
                     complaint_id=parent_id,
                     status=parent_complaint.get("status", "Registered"),
-                    remarks=f"System: Priority escalated to {new_urgency} due to multiple reports ({new_size}).",
+                    remarks=f"System: Priority escalated to {target_urgency} due to reaching {new_size} reports in this area.",
                     project_root=self.project_root
                 )
             
-            update_record("complaints", parent_complaint["id"], update_data) # use row_id or check logic
-            
-            # For the current user result, we might want to show the PARENT's info or own info?
-            # We will show mix: Their own ID, but maybe the Urgency of the cluster?
-            # For now, let's keep their own urgency prediction but routing is same.
+            # Update parent record (use row_id 'id' for update_record)
+            update_record("complaints", parent_complaint["id"], update_data, id_field="id")
             
         # --- CLUSTERING LOGIC END ---
 
@@ -421,14 +479,14 @@ class ComplaintProcessor:
             user_id=user.id,
             text=complaint_text,
             category=effective_category,
-            urgency=urg_label,
+            urgency=final_urgency, # Use cluster-aligned urgency
             language=language,
             location=location,
             status="Registered",
             department_id=department_id,
             parent_complaint_id=parent_id,
             is_clustered=is_clustered,
-            cluster_size=1, # New complaint starts as size 1 (if parent, its contributing to parent, itself is size 1)
+            cluster_size=1, # Individual report size is 1
             project_root=self.project_root,
         )
 
